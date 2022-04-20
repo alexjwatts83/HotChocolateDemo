@@ -23,3 +23,6 @@ to udpate the EF tool itself:
 
 `dotnet tool update --global dotnet-ef`
 
+to apply update:
+
+`dotnet ef database update`
