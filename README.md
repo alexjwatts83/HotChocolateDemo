@@ -19,10 +19,17 @@ or
 `docker-compose stop`
 
 ## Entity Framework
+
+### Update EF
 to udpate the EF tool itself:
 
 `dotnet tool update --global dotnet-ef`
 
+### Add Migration
+
+`dotnet ef migrations add AddPlatformToDb`
+
+### Update db
 to apply update:
 
 `dotnet ef database update`
