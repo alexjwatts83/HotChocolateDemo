@@ -18,9 +18,9 @@ or
 
 `docker-compose stop`
 
-## Entity Framework
+## Entity Framework Code First
 
-### Update EF
+### Update EF Global Tool
 to udpate the EF tool itself:
 
 `dotnet tool update --global dotnet-ef`
@@ -33,3 +33,6 @@ to udpate the EF tool itself:
 to apply update:
 
 `dotnet ef database update`
+
+## GraphQL
+
