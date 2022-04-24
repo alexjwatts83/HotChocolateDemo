@@ -36,3 +36,5 @@ to apply update:
 
 ## GraphQL
 
+Check https://dev.to/moe23/net-5-api-with-graphql-step-by-step-2b20 which has code for the `startup.cs`
+ file
