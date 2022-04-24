@@ -1,0 +1,27 @@
+_id: req_58162c201a204571a3e2c9ee100cf146
+type: Request
+parentId: fld_d610704b31b74449be70cce2a635eaac
+modified: 1650838904978
+created: 1650801267770
+url: https://localhost:5001/graphql/
+name: Filter
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  platform(where: {licenseKey: {neq: null}})
+    {\n    name\n\t\tid\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314382764
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,28 @@
+_id: req_8bd38648fb774f3fb28f888c36c9dde6
+type: Request
+parentId: fld_0abea01779244c37ada2fed51582634d
+modified: 1650839770566
+created: 1650838926400
+url: https://localhost:5001/graphql/
+name: Add Platform
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation {\n\taddPlatform(input: {\n\t\tname:
+    \"Ubuntu\"\n\t})\n\t{\n\t\tplatform
+    {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314383012.4375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

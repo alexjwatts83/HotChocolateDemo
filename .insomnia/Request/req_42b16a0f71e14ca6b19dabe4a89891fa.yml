@@ -1,0 +1,28 @@
+_id: req_42b16a0f71e14ca6b19dabe4a89891fa
+type: Request
+parentId: fld_d610704b31b74449be70cce2a635eaac
+modified: 1650838901397
+created: 1650798108450
+url: https://localhost:5001/graphql/
+name: Get Commands
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  command
+    {\n\t\tid\n\t\thowTo\n\t\tcommandLine\n\t\tplatform
+    {\n\t\t\tid\n\t\t\tname\n\t\t}\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314382864
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

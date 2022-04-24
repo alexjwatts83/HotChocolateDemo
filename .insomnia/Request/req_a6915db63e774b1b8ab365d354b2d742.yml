@@ -1,0 +1,28 @@
+_id: req_a6915db63e774b1b8ab365d354b2d742
+type: Request
+parentId: fld_d610704b31b74449be70cce2a635eaac
+modified: 1650839636812
+created: 1650801374326
+url: https://localhost:5001/graphql/
+name: Filter For .Net 5
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  command(where: {platformId: {eq: 1}})
+    {\n\t\tid\n\t\tcommandLine\n\t\thowTo\n\t\tplatform
+    {\n\t\t\tname\n\t\t}\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314382814
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

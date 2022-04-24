@@ -1,0 +1,26 @@
+_id: req_5e9ff6a9bf294bae89a921fe0339242c
+type: Request
+parentId: fld_d610704b31b74449be70cce2a635eaac
+modified: 1650839056938
+created: 1650314383014
+url: https://localhost:5001/graphql/
+name: Platforms
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  platform {\n    name\n\t\tid\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314383014
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

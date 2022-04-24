@@ -1,0 +1,27 @@
+_id: req_f4e4af04282e455a830faa1530222d74
+type: Request
+parentId: fld_d610704b31b74449be70cce2a635eaac
+modified: 1650838897249
+created: 1650760728267
+url: https://localhost:5001/graphql/
+name: Parallel
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"query {\n  a: platform {\n    name\n\t\tid\n  }\n\tb: platform
+    {\n    name\n\t\tid\n  }\n\tc: platform {\n    name\n\t\tid\n  }\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314382964
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

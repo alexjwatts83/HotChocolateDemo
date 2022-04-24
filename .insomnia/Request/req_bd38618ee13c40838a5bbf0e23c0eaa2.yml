@@ -1,0 +1,30 @@
+_id: req_bd38618ee13c40838a5bbf0e23c0eaa2
+type: Request
+parentId: fld_0abea01779244c37ada2fed51582634d
+modified: 1650839864382
+created: 1650839777756
+url: https://localhost:5001/graphql/
+name: Add Command
+description: ""
+method: POST
+body:
+  mimeType: application/graphql
+  text: '{"query":"mutation {\n\taddCommand(input: {\n\t\thowTo: \"Perform
+    directory listing\",\n\t\tcommandLine: \"ls\"\n\t\tplatformId:
+    4\n\t})\n\t{\n\t\tcommand
+    {\n\t\t\tid\n\t\t\thowTo\n\t\t\tcommandLine\n\t\t\tplatform
+    {\n\t\t\t\tid\n\t\t\t\tname\n\t\t\t}\n\t\t}\n\t}\n}"}'
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+    id: pair_f1012bd4637f4814a3bc4f4e76e28a44
+authentication: {}
+metaSortKey: -1650314383011.6562
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
