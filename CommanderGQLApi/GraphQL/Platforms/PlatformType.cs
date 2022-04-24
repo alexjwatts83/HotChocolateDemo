@@ -1,11 +1,8 @@
-﻿using CommanderGQLApi.Data;
+﻿using System.Linq;
+using CommanderGQLApi.Data;
 using CommanderGQLApi.Models;
 using HotChocolate;
 using HotChocolate.Types;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CommanderGQLApi.GraphQL.Platforms
 {
@@ -27,6 +24,7 @@ namespace CommanderGQLApi.GraphQL.Platforms
             descriptor
                 .Field(p => p.LicenseKey).Ignore();
 
+
             descriptor
                 .Field(p => p.Commands)
                 .ResolveWith<Resolvers>(p => p.GetCommands(default!, default!))
@@ -36,7 +34,7 @@ namespace CommanderGQLApi.GraphQL.Platforms
 
         private class Resolvers
         {
-            public IQueryable<Command> GetCommands(Platform platform, [ScopedService] AppDbContext context)
+            public IQueryable<Command> GetCommands([Parent] Platform platform, [ScopedService] AppDbContext context)
             {
                 return context.Commands.Where(p => p.PlatformId == platform.Id);
             }

@@ -18,7 +18,8 @@ namespace CommanderGQLApi.GraphQL
         /// <param name="context">The <see cref="AppDbContext"/>.</param>
         /// <returns>The queryable <see cref="Platform"/>.</returns>
         [UseDbContext(typeof(AppDbContext))]
-        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
         [GraphQLDescription("Gets the queryable platform.")]
         public IQueryable<Platform> GetPlatform([ScopedService] AppDbContext context)
         {
@@ -31,7 +32,8 @@ namespace CommanderGQLApi.GraphQL
         /// <param name="context">The <see cref="AppDbContext"/>.</param>
         /// <returns>The queryable <see cref="Command"/>.</returns>
         [UseDbContext(typeof(AppDbContext))]
-        [UseProjection]
+        [UseFiltering]
+        [UseSorting]
         [GraphQLDescription("Gets the queryable command.")]
         public IQueryable<Command> GetCommand([ScopedService] AppDbContext context)
         {
