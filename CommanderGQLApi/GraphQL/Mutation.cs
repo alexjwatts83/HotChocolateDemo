@@ -1,9 +1,9 @@
 ﻿using CommanderGQLApi.Data;
+using CommanderGQLApi.GraphQL.Commands;
 using CommanderGQLApi.GraphQL.Platforms;
 using CommanderGQLApi.Models;
 using HotChocolate;
 using HotChocolate.Data;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CommanderGQLApi.GraphQL
@@ -24,6 +24,23 @@ namespace CommanderGQLApi.GraphQL
 
             return new AddPlatformPayload(platform)
 ;
+        }
+
+        [UseDbContext(typeof(AppDbContext))]
+        [GraphQLDescription("Adds a command.")]
+        public async Task<AddCommandPayload> AddCommandAsync(AddCommandInput input, [ScopedService] AppDbContext context)
+        {
+            var command = new Command
+            {
+                HowTo = input.HowTo,
+                CommandLine = input.CommandLine,
+                PlatformId = input.PlatformId
+            };
+
+            context.Commands.Add(command);
+            await context.SaveChangesAsync();
+
+            return new AddCommandPayload(command);
         }
     }
 }
