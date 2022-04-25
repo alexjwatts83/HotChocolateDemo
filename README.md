@@ -40,3 +40,7 @@ Check https://dev.to/moe23/net-5-api-with-graphql-step-by-step-2b20 which has co
  file
 
 For v12 resolvers use `[Parent]` https://chillicream.com/docs/hotchocolate/api-reference/migrate-from-11-to-12#resolvers
+
+### Startup
+
+Consider using a persistent version of `AddInMemorySubscriptions()` later on
