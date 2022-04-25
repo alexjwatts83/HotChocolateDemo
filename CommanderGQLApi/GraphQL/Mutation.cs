@@ -4,6 +4,8 @@ using CommanderGQLApi.GraphQL.Platforms;
 using CommanderGQLApi.Models;
 using HotChocolate;
 using HotChocolate.Data;
+using HotChocolate.Subscriptions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CommanderGQLApi.GraphQL
@@ -12,7 +14,11 @@ namespace CommanderGQLApi.GraphQL
     public class Mutation
     {
         [UseDbContext(typeof(AppDbContext))]
-        public async Task<AddPlatformPayload> AddPlatformAsync(AddPlatformInput input, [ScopedService] AppDbContext context)
+        public async Task<AddPlatformPayload> AddPlatformAsync(
+            AddPlatformInput input,
+            [ScopedService] AppDbContext context,
+            [Service] ITopicEventSender eventSender,
+            CancellationToken cancellationToken)
         {
             var platform = new Platform
             {
@@ -20,7 +26,10 @@ namespace CommanderGQLApi.GraphQL
             };
 
             context.Platforms.Add(platform);
-            await context.SaveChangesAsync();
+
+            await context.SaveChangesAsync(cancellationToken);
+
+            await eventSender.SendAsync(nameof(Subscription.OnPlatformAdded), platform, cancellationToken);
 
             return new AddPlatformPayload(platform)
 ;
