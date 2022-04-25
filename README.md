@@ -3,6 +3,10 @@ Small demo for Hot Chocolate with GraphQL
 ## Run Locally
 How to set up your machine locally
 
+### Run Project
+
+`dotnet watch run --project CommanderGQLApi/`
+
 ### Docker Setup
 Run to start:
 
@@ -40,3 +44,11 @@ Check https://dev.to/moe23/net-5-api-with-graphql-step-by-step-2b20 which has co
  file
 
 For v12 resolvers use `[Parent]` https://chillicream.com/docs/hotchocolate/api-reference/migrate-from-11-to-12#resolvers
+
+### GraphQL Voyager
+
+https://localhost:5001/graphql-voyager
+
+### Startup
+
+Consider using a persistent version of `AddInMemorySubscriptions()` later on
